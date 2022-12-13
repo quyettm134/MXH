@@ -1,5 +1,5 @@
 import { Text, View, SafeAreaView, Image, StatusBar, FlatList } from 'react-native';
-import { COLORS, SIZES, SHADOWS, FONTS, assets } from '../constants';
+import { COLORS, SIZES, SHADOWS, assets } from '../constants';
 import { CircleButton, RectButton, SubInfo, FocusedStatusBar, DetailsDesc, DetailsBid } from '../components';
 import React from 'react';
 
@@ -12,7 +12,18 @@ const DetailsHeader = ({ data, navigation }) => {
         style={{ width: '100%', height: '100%' }}
       />
 
-      <CircleButton/>
+      <CircleButton
+        imgUrl={assets.left}
+        handlePress={() => navigation.goBack()}
+        left={15}
+        top={StatusBar.currentHeight + 10}
+      />
+
+      <CircleButton
+        imgUrl={assets.heart}
+        right={15}
+        top={StatusBar.currentHeight + 10}
+      />
     </View>
   )
 }
@@ -50,6 +61,19 @@ const Details = ({ route, navigation }) => {
         ListHeaderComponent={() => (
           <React.Fragment>
             <DetailsHeader data={data} navigation={navigation}/>
+            <SubInfo />
+            <View style={{ padding: SIZES.font }}>
+              <DetailsDesc data={data}/>
+
+              {data.bids.length > 0 && (
+                <Text style={{
+                  fontSize: SIZES.font,
+                  color: COLORS.primary
+                }}>
+                  Bình luận
+                </Text>
+              )}
+            </View>
           </React.Fragment>
         )}
       />

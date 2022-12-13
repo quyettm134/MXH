@@ -3,6 +3,7 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
 import Home from './screens/Home';
 import Details from './screens/Details';
+import AccountInfo from './screens/AccountInfo';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +31,7 @@ const App = () => {
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Home">
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Details" component={Details}/>
+        <Stack.Screen name="AccountInfo" component={AccountInfo}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

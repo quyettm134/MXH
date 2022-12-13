@@ -82,7 +82,7 @@ export const EndDate = () => {
                     color: COLORS.primary
                 }}
             >
-                Ending in
+                Ngày đăng
             </Text>
 
             <Text 
@@ -91,7 +91,7 @@ export const EndDate = () => {
                     color: COLORS.primary
                 }}
             >
-                12h 30m
+                12/12/2022
             </Text>
         </View>
     )
