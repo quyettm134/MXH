@@ -10,16 +10,31 @@ import {
     Button,
     TouchableOpacity,
     LogBox,
+    Alert,
 } from "react-native";
 import { assets } from "../constants";
-// import { RectButton } from "../components";
 import { COLORS, SIZES } from "../constants";
+import { checkAccount } from "../constants/account";
 
 const Login = () => {
     const navigation = useNavigation();
 
-    const [email, setEmail] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+
+    const doCheckAccount = async () => {
+        const usernameValue = username;
+        const passwordValue = password;
+
+        const resultUser = await checkAccount(usernameValue, passwordValue);
+
+        if (resultUser.err) {
+            Alert.alert("Error!", resultUser.err);
+        }
+        else {
+            navigation.navigate("Home");
+        }
+    }
 
     return (
         <View style={styles.container}>
@@ -29,9 +44,9 @@ const Login = () => {
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
-                    placeholder="Email"
+                    placeholder="Username"
                     placeholderTextColor="#808080"
-                    onChangeText={(email) => setEmail(email)}
+                    onChangeText={(email) => setUsername(email)}
                 />
             </View>
 
@@ -50,7 +65,7 @@ const Login = () => {
             </TouchableOpacity>
 
 
-            <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate("Home")}>
+            <TouchableOpacity style={styles.loginBtn} onPress={() => doCheckAccount()}>
                 <Text style={{
                     color: COLORS.white,
                     textAlign: "center"

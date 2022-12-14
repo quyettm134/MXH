@@ -87,4 +87,27 @@ export function changeUserInfo(userId, { changes }) {
     accounts.push(newUserInfo);
 }
 
+export function checkAccount(username, password) {
+    if (!username || !password) {
+        return { err: "Username and password is required!" };
+    }
+
+    let account = {};
+
+    for (const item of accounts) {
+        if (item.username == username) {
+            account = item;
+            break;
+        }
+    }
+
+    if (account != {}) {
+        if (account.password == password) {
+            return account;
+        }
+    }
+
+    return { err: "Username or password is incorrect!" };
+}
+
 export { accounts };
