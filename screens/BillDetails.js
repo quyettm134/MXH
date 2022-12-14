@@ -7,7 +7,6 @@ import { assets, COLORS, SIZES } from '../constants';
 const BillDetails = () => {
     const navigation = useNavigation();
 
-
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
@@ -35,33 +34,105 @@ const BillDetails = () => {
                     <View style={styles.bodyContent}>
                         <View style={styles.bill}>                            
                             <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
-                                <View style={{ paddingLeft: 10, paddingTop: 10 }}>
-                                    <Text style={styles.billText}>Thời hạn thanh toán</Text>
-                                    <Text style={[styles.billText, styles.numberColor]}>14/12/2022</Text>
+                                <View style={{ paddingLeft: 0, paddingTop: 10, alignItems: 'center' }}>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingLeft: 10
+                                    }}>Thời hạn thanh toán</Text>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingLeft: 10,
+                                      color: "red"
+                                    }}>14/12/2022</Text>
                                 </View>
-                                <View style={{ paddingRight: 10, paddingTop: 10 }}>
-                                    <Text style={styles.billText}>Thành tiền</Text>
-                                    <Text style={[styles.billText, styles.numberColor]}>20.000đ / 1 khối</Text>
+                                <View style={{ paddingRight: 0, paddingTop: 10, alignItems: 'center' }}>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingRight: 10
+                                    }}>Thành tiền</Text>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingRight: 10,
+                                      color: "red"
+                                    }}>20.000đ / 1 khối</Text>
                                 </View>
                             </View>
                             <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginTop: 20 }}>
                                 <View style={{ paddingLeft: 10, paddingTop: 10 }}>
                                     <Text style={styles.billText}>Chỉ số nước (Trước)</Text>
-                                    <Text style={[styles.billText, styles.numberColor]}>3 khối</Text>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      color: "red",
+                                      paddingLeft: 30
+                                    }}>5.5 khối</Text>
                                 </View>
-                                <View style={{ paddingRight: 10, paddingTop: 10 }}>
-                                    <Text style={styles.billText}>Chỉ số nước (Sau)</Text>
-                                    <Text style={[styles.billText, styles.numberColor]}>5.5 khối</Text>
+                                <View style={{ paddingRight: 10, paddingTop: 10, alignItems: 'center' }}>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingLeft: 30
+                                    }}>Chỉ số nước (Sau)</Text>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      color: "red",
+                                      paddingLeft: 30
+                                    }}>7 khối</Text>
                                 </View>
                             </View>
                             <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginTop: 20 }}>
-                                <View style={{ paddingLeft: 10, paddingTop: 10 }}>
-                                    <Text style={styles.billText}>Số tiền cần thanh toán</Text>
-                                    <Text style={[styles.billText, styles.numberColor]}>150.000đ</Text>
+                                <View style={{ paddingLeft: 0, paddingTop: 10, alignItems: 'center' }}>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingLeft: 15
+                                    }}>Số tiền cần trả</Text>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      color: "red",
+                                      paddingLeft: 15
+                                    }}>140.000đ</Text>
                                 </View>
-                                <View style={{ paddingRight: 10, paddingTop: 10 }}>
-                                    <Text style={styles.billText}>Tình trạng</Text>
-                                    <Text style={[styles.billText, styles.numberColor]}>Chưa thanh toán</Text>
+                                <View style={{ paddingRight: 0, paddingTop: 10 }}>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingLeft: 30
+                                    }}>Tình trạng</Text>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingRight: 10,
+                                      color: "red"
+                                    }}>Chưa thanh toán</Text>
                                 </View>
                             </View>
                         </View>
@@ -122,15 +193,6 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         marginTop: 15,
     },
-    billText: {
-        fontWeight: "bold",
-        fontSize: 16,
-        marginTop: 5,
-        marginBottom: 10
-    },
-    numberColor: {
-        color: "red"
-    }
 });
   
 export default BillDetails;
