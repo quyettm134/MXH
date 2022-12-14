@@ -3,7 +3,7 @@ import DropDownPicker from 'react-native-dropdown-picker';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { CircleButton } from '../components';
-import { COLORS, assets } from '../constants';
+import { COLORS, assets, bills } from '../constants';
 
 const Bills = () => {
   const navigation = useNavigation();
@@ -17,7 +17,6 @@ const Bills = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-
       <View style={styles.container}>
           <View style={styles.header}>
             <View style={styles.nameContainer}>
@@ -31,60 +30,61 @@ const Bills = () => {
             </View>  
           </View>
           <View style={styles.body}>
-              <View style={{ marginLeft: 10 }}>
-                <Text style={{ fontWeight: "bold", fontSize: 16 }}>Phân loại theo tháng</Text>
-                <View style={{ paddingTop: 20 }}>
-                  <DropDownPicker style={{
-                    width: 373,
-                  }}
-                    placeholder="Chọn tháng"
-                    open={open}
-                    value={value}
-                    items={items}
-                    setOpen={setOpen}
-                    setValue={setValue}
-                    setItems={setItems}
-                  />
-                </View>
+            <View style={{ marginLeft: 10 }}>
+              <Text style={{ fontWeight: "bold", fontSize: 16 }}>Phân loại theo tháng</Text>
+              <View style={{ paddingTop: 20 }}>
+                <DropDownPicker style={{
+                  width: 373,
+                }}
+                  placeholder="Chọn tháng"
+                  open={open}
+                  value={value}
+                  items={items}
+                  setOpen={setOpen}
+                  setValue={setValue}
+                  setItems={setItems}
+                />
               </View>
-              <View style={styles.bodyContent}>
-                <TouchableOpacity style={styles.bill}>
-                  <View style={{ paddingLeft: 10, paddingTop: 6 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 16 }}>Tiền điện tháng 12</Text>
-                  </View>
-                  <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
-                  <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "green"}}>200.000 đ</Text></Text>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "green"}}>Đã thanh toán</Text></Text>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Thanh toán hoàn tất vào ngày: <Text style={{ color: "green"}}>14/12/2022</Text></Text>
-                  </View>
-                </TouchableOpacity>
+            </View>
 
-                <TouchableOpacity style={styles.bill}>
-                  <View style={{ paddingLeft: 10, paddingTop: 6 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 16 }}>Tiền nước tháng 12</Text>
-                  </View>
-                  <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
-                  <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "gray"}}>150.000 đ</Text></Text>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "gray"}}>Chưa thanh toán</Text></Text>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Hạn thanh toán vào ngày: <Text style={{ color: "gray"}}></Text></Text>
-                  </View>
-                </TouchableOpacity>
-                
-                <TouchableOpacity style={styles.bill}>
-                  <View style={{ paddingLeft: 10, paddingTop: 6 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 16 }}>Tiền mạng tháng 12</Text>
-                  </View>
-                  <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
-                  <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "red"}}>140.000 đ</Text></Text>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "red"}}>Đã quá hạn</Text></Text>
-                    <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Thanh toán dã quá hạn vào ngày: <Text style={{ color: "red"}}>12/12/2022</Text></Text>
-                  </View>
-                </TouchableOpacity>
-              </View>
-          </View>
+            <View style={styles.bodyContent}>
+              <TouchableOpacity style={styles.bill} onPress={() => navigation.navigate("BillDetails")}>
+                <View style={{ paddingLeft: 10, paddingTop: 6 }}>
+                  <Text style={{ fontWeight: "bold", fontSize: 16 }}>Tiền điện tháng 12</Text>
+                </View>
+                <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
+                <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "green"}}>{bills[0].price}</Text></Text>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "green"}}>{bills[0].status}</Text></Text>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Thanh toán hoàn tất vào ngày: <Text style={{ color: "green"}}>{bills[0].date}</Text></Text>
+                </View>
+              </TouchableOpacity>
+
+              <TouchableOpacity style={styles.bill} onPress={() => navigation.navigate("BillDetails")}>
+                <View style={{ paddingLeft: 10, paddingTop: 6 }}>
+                  <Text style={{ fontWeight: "bold", fontSize: 16 }}>Tiền nước tháng 12</Text>
+                </View>
+                <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
+                <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "gray"}}>{bills[1].price}</Text></Text>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "gray"}}>{bills[1].status}</Text></Text>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Hạn thanh toán vào ngày: <Text style={{ color: "gray"}}>{bills[1].date}</Text></Text>
+                </View>
+              </TouchableOpacity>
+              
+              <TouchableOpacity style={styles.bill} onPress={() => navigation.navigate("BillDetails")}>
+                <View style={{ paddingLeft: 10, paddingTop: 6 }}>
+                  <Text style={{ fontWeight: "bold", fontSize: 16 }}>Tiền mạng tháng 12</Text>
+                </View>
+                <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
+                <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
+                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Thanh toán đã quá hạn vào ngày: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
+                </View>
+              </TouchableOpacity>
+            </View>
+        </View>
       </View>
     </SafeAreaView>
   )
