@@ -92,8 +92,9 @@ const Bills = () => {
 
 const styles = StyleSheet.create({
   header: {
-      height: 70,
-      backgroundColor: COLORS.primary
+      height: 80,
+      backgroundColor: COLORS.primary,
+      paddingTop: 10
   },
   name: {
     fontSize: 22,

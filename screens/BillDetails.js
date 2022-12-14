@@ -1,11 +1,12 @@
 import { View, Text, SafeAreaView, TouchableOpacity, StyleSheet } from 'react-native';
+import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { CircleButton } from '../components';
 import { assets, COLORS, SIZES } from '../constants';
-import React from 'react';
 
 const BillDetails = () => {
     const navigation = useNavigation();
+
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -89,8 +90,9 @@ const BillDetails = () => {
 
 const styles = StyleSheet.create({
     header: {
-        height: 70,
-        backgroundColor: COLORS.primary
+        height: 80,
+        backgroundColor: COLORS.primary,
+        paddingTop: 10
     },
     name: {
         fontSize: 22,
