@@ -26,7 +26,7 @@ export const EthPrice = ({ price }) => {
             alignItems: "center"
         }}>
             <Image 
-                source={assets.eth}
+                source={assets.heart}
                 resizeMode="contain"
                 style={{ width: 20, height: 20, marginRight: 2 }}
             />

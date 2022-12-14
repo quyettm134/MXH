@@ -4,6 +4,8 @@ import { useFonts } from 'expo-font';
 import Home from './screens/Home';
 import Details from './screens/Details';
 import AccountInfo from './screens/AccountInfo';
+import Bills from './screens/Bills';
+import RoomInfo from './screens/RoomInfo';
 
 const Stack = createStackNavigator();
 
@@ -32,6 +34,8 @@ const App = () => {
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Details" component={Details}/>
         <Stack.Screen name="AccountInfo" component={AccountInfo}/>
+        <Stack.Screen name="Bills" component={Bills}/>
+        <Stack.Screen name="RoomInfo" component={RoomInfo}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
