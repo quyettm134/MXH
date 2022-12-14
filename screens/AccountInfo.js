@@ -1,8 +1,11 @@
 import { View, Text, SafeAreaView, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import { COLORS, SIZES, SHADOWS, FONTS, assets } from '../constants';
-import { FocusedStatusBar, RectButton } from '../components';
+import { COLORS, assets } from '../constants';
+import { FocusedStatusBar } from '../components';
+import { useNavigation } from '@react-navigation/native';
 
 const AccountInfo = () => {
+    const navigation = useNavigation();
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <FocusedStatusBar background={COLORS.primary}/>
@@ -12,16 +15,21 @@ const AccountInfo = () => {
                 <Image style={styles.avatar} source={assets.person01}/>
                 <View style={styles.body}>
                     <View style={styles.bodyContent}>
-                    <Text style={styles.name}>John Doe</Text>
-                    <Text style={styles.info}>UX Designer / Mobile developer</Text>
-                    <Text style={styles.description}>Lorem ipsum dolor sit amet, saepe sapientem eu nam. Qui ne assum electram expetendis, omittam deseruisse consequuntur ius an,</Text>
-                    
-                    <TouchableOpacity style={styles.buttonContainer}>
-                        <Text>Opcion 1</Text>  
-                    </TouchableOpacity>              
-                    <TouchableOpacity style={styles.buttonContainer}>
-                        <Text>Opcion 2</Text> 
-                    </TouchableOpacity>
+                      <View style={styles.nameContainer}>
+                        <Text style={{ color: "#000000", fontWeight: "bold", fontSize: 32 }}>Quyet Nguyen</Text> 
+                      </View>  
+                                  
+                      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("RoomInfo")}>
+                        <Text style={{ color: "#FFFFFF" }}>Current room</Text> 
+                      </TouchableOpacity>
+
+                      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("Bills")}>
+                        <Text style={{ color: "#FFFFFF" }}>Bills</Text> 
+                      </TouchableOpacity>
+
+                      <TouchableOpacity style={styles.buttonContainer}>
+                        <Text style={{ color: "#FFFFFF" }}>Services</Text> 
+                      </TouchableOpacity>
                     </View>
                 </View>
             </View>
@@ -62,24 +70,16 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       padding: 30,
     },
-    name:{
-      fontSize:28,
-      color: "#696969",
-      fontWeight: "600"
-    },
-    info:{
-      fontSize:16,
-      color: "#00BFFF",
-      marginTop:10
-    },
-    description:{
-      fontSize: 16,
-      color: "#696969",
+    nameContainer: {
       marginTop: 10,
-      textAlign: 'center'
+      height: 45,
+      flexDirection: 'row',
+      justifyContent: 'center',
+      alignItems: 'center',
+      marginBottom: 10,
     },
     buttonContainer: {
-      marginTop: 10,
+      marginTop: 20,
       height: 45,
       flexDirection: 'row',
       justifyContent: 'center',
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
       marginBottom: 20,
       width: 250,
       borderRadius: 30,
-      backgroundColor: "#00BFFF",
+      backgroundColor: COLORS.primary
     },
 });
 

@@ -86,3 +86,5 @@ export function changeUserInfo(userId, { changes }) {
     accounts.pop(currUserInfo);
     accounts.push(newUserInfo);
 }
+
+export { accounts };
