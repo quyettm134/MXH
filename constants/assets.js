@@ -5,8 +5,6 @@ import left from "../assets/icons/left.png";
 import search from "../assets/icons/search.png";
 
 import logo from "../assets/images/logo.png";
-import BKNews from "../assets/images/BKNews.png";
-import logoBK from "../assets/images/logoBK.png"
 import nft01 from "../assets/images/nft01.png";
 import nft02 from "../assets/images/nft02.jpeg";
 import nft03 from "../assets/images/nft03.jpeg";
@@ -28,8 +26,6 @@ export default {
   search,
 
   logo,
-  logoBK,
-  BKNews,
   nft01,
   nft02,
   nft03,

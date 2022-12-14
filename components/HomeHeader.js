@@ -8,7 +8,8 @@ const HomeHeader = () => {
   return (
     <View style={{
       backgroundColor: COLORS.primary,
-      padding: SIZES.font
+      padding: SIZES.font,
+      marginTop: 20
     }}>
       <View style={{
         flexDirection: 'row',
