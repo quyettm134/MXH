@@ -54,9 +54,9 @@ const Bills = () => {
                 </View>
                 <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
                 <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "green"}}>{bills[0].price}</Text></Text>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "green"}}>{bills[0].status}</Text></Text>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Thanh toán hoàn tất vào ngày: <Text style={{ color: "green"}}>{bills[0].date}</Text></Text>
+                  <Text style={styles.billText}>Giá: <Text style={{ color: "green"}}>{bills[0].price}</Text></Text>
+                  <Text style={styles.billText}>Trạng thái: <Text style={{ color: "green"}}>{bills[0].status}</Text></Text>
+                  <Text style={styles.billText}>Thanh toán hoàn tất vào ngày: <Text style={{ color: "green"}}>{bills[0].date}</Text></Text>
                 </View>
               </TouchableOpacity>
 
@@ -66,9 +66,9 @@ const Bills = () => {
                 </View>
                 <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
                 <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "gray"}}>{bills[1].price}</Text></Text>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "gray"}}>{bills[1].status}</Text></Text>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Hạn thanh toán vào ngày: <Text style={{ color: "gray"}}>{bills[1].date}</Text></Text>
+                  <Text style={styles.billText}>Giá: <Text style={{ color: "gray"}}>{bills[1].price}</Text></Text>
+                  <Text style={styles.billText}>Trạng thái: <Text style={{ color: "gray"}}>{bills[1].status}</Text></Text>
+                  <Text style={styles.billText}>Hạn thanh toán vào ngày: <Text style={{ color: "gray"}}>{bills[1].date}</Text></Text>
                 </View>
               </TouchableOpacity>
               
@@ -78,9 +78,9 @@ const Bills = () => {
                 </View>
                 <View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10}}></View>
                 <View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Giá: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Trạng thái: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
-                  <Text style={{ fontWeight: "bold", fontSize: 16, marginTop: 10 }}>Thanh toán đã quá hạn vào ngày: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
+                  <Text style={styles.billText}>Giá: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
+                  <Text style={styles.billText}>Trạng thái: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
+                  <Text style={styles.billText}>Thanh toán đã quá hạn vào ngày: <Text style={{ color: "red"}}>{bills[2].price}</Text></Text>
                 </View>
               </TouchableOpacity>
             </View>
@@ -122,6 +122,11 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: 15,
     marginTop: 15
+  },
+  billText: {
+    fontWeight: "bold", 
+    fontSize: 16, 
+    marginTop: 10
   }
 });
 export default Bills;
