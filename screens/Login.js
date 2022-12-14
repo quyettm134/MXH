@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import { useNavigation } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
     StyleSheet,
@@ -15,6 +16,8 @@ import { assets } from "../constants";
 import { COLORS, SIZES } from "../constants";
 
 const Login = () => {
+    const navigation = useNavigation();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -47,7 +50,7 @@ const Login = () => {
             </TouchableOpacity>
 
 
-            <TouchableOpacity style={styles.loginBtn}>
+            <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate("Home")}>
                 <Text style={{
                     color: COLORS.white,
                     textAlign: "center"
