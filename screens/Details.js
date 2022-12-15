@@ -1,9 +1,33 @@
-import { Text, View, SafeAreaView, Image, StatusBar, FlatList } from 'react-native';
-import { COLORS, SIZES, SHADOWS, assets } from '../constants';
-import { CircleButton, RectButton, SubInfo, FocusedStatusBar, DetailsDesc, DetailsBid } from '../components';
-import React from 'react';
+import { Text, View, SafeAreaView, Image, StatusBar, FlatList, Alert } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import React, { useState } from 'react';
+import { COLORS, SIZES, assets } from '../constants';
+import { CircleButton, SubInfo, FocusedStatusBar, DetailsDesc, DetailsBid } from '../components';
 
 const DetailsHeader = ({ data, navigation }) => {
+  const navigation = useNavigation();
+
+  const [showBox, setShowBox] = useState(true);
+
+    const showConfirmDialog = () => {
+        return Alert.alert(
+            "Xác nhận",
+            "Bạn chắc chắn hủy yêu cầu?",
+            [
+                {
+                    text: 'Yes',
+                    onPress: () => {
+                        setShowBox(false);
+                        navigation.navigate("Services");
+                    }
+                },
+                {
+                    text: 'No',
+                }
+            ]
+        );
+    };
+
   return (
     <View style={{ width: '100%', height: 373 }}>
       <Image
@@ -49,7 +73,26 @@ const Details = ({ route, navigation }) => {
         backgroundColor: 'rgba(255, 255, 255, 0.5)',
         zIndex: 1
       }}>
-        <RectButton minWidth={170} fontSize={SIZES.large} {...SHADOWS.dark} />
+        <TouchableOpacity 
+            style={{
+                backgroundColor: COLORS.primary,
+                borderRadius: SIZES.extraLarge,
+                minWidth: 170,
+                padding: SIZES.small,
+            }}
+            onPress={
+              () => {
+                showConfirmDialog();
+                navigation.navigate("RoomInfo");
+              }
+            }
+        >
+            <Text style={{
+                fontSize: SIZES.large,
+                color: COLORS.white,
+                textAlign: "center"
+            }}>Đăng ký phòng</Text>
+        </TouchableOpacity>
       </View>
 
       <FlatList
