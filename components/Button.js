@@ -42,7 +42,7 @@ export const RectButton = ({ minWidth, fontSize, handlePress, ...props }) => {
                 fontSize: fontSize,
                 color: COLORS.white,
                 textAlign: "center"
-            }}>Bình luận</Text>
+            }}>Review</Text>
         </TouchableOpacity>
     )
 }
