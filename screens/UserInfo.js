@@ -18,15 +18,30 @@ const UserInfo = () => {
 						</View>
 
 						<TouchableOpacity style={styles.buttonContainer}>
-							<Text style={{ color: "#FFFFFF" }}>Add friend</Text>
+							<Image source={assets.addfriend} style={{
+								width: 25,
+								height: 25,
+								marginRight: 30
+							}} />
+							<Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Add friend</Text>
 						</TouchableOpacity>
 
 						<TouchableOpacity style={styles.buttonContainer}>
-							<Text style={{ color: "#FFFFFF" }}>Call</Text>
+							<Image source={assets.call} style={{
+								width: 25,
+								height: 25,
+								marginRight: 30
+							}} />
+							<Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Call</Text>
 						</TouchableOpacity>
 
 						<TouchableOpacity style={styles.buttonContainer}>
-							<Text style={{ color: "#FFFFFF" }}>Message</Text>
+							<Image source={assets.chat} style={{
+								width: 25,
+								height: 25,
+								marginRight: 30
+							}} />
+							<Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Message</Text>
 						</TouchableOpacity>
 					</View>
 				</View>

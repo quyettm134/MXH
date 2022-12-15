@@ -1,6 +1,6 @@
 import { View, Text, SafeAreaView, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { COLORS, assets } from '../constants';
-import { FocusedStatusBar } from '../components';
+import { FocusedStatusBar, CircleButton } from '../components';
 import { useNavigation } from '@react-navigation/native';
 
 const AccountInfo = () => {
@@ -11,7 +11,10 @@ const AccountInfo = () => {
             <FocusedStatusBar background={COLORS.primary}/>
 
             <View style={styles.container}>
-                <View style={styles.header}></View>
+                <View style={styles.header}>
+                  <CircleButton imgUrl={assets.edit} right={20} top={30} />
+                  <CircleButton imgUrl={assets.more} right={20} top={90} />
+                </View>
                 <Image style={styles.avatar} source={assets.person01}/>
                 <View style={styles.body}>
                     <View style={styles.bodyContent}>
@@ -20,15 +23,30 @@ const AccountInfo = () => {
                       </View>  
                                   
                       <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("RoomInfo")}>
-                        <Text style={{ color: "#FFFFFF" }}>Current room</Text> 
+                        <Image source={assets.room} style={{
+                          width: 25,
+                          height: 25,
+                          marginRight: 30
+                        }}/>
+                        <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Phòng của tôi</Text> 
                       </TouchableOpacity>
 
                       <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("Bills")}>
-                        <Text style={{ color: "#FFFFFF" }}>Bills</Text> 
+                        <Image source={assets.bill} style={{
+                          width: 25,
+                          height: 25,
+                          marginRight: 30
+                        }}/>
+                        <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Hóa đơn của tôi</Text> 
                       </TouchableOpacity>
 
                       <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={{ color: "#FFFFFF" }}>Services</Text> 
+                        <Image source={assets.services} style={{
+                          width: 25,
+                          height: 25,
+                          marginRight: 30
+                        }}/>
+                        <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Yêu cầu của tôi</Text> 
                       </TouchableOpacity>
                     </View>
                 </View>

@@ -70,7 +70,7 @@ const Details = ({ route, navigation }) => {
                   fontSize: SIZES.font,
                   color: COLORS.primary
                 }}>
-                  Bình luận
+                  Review
                 </Text>
               )}
             </View>

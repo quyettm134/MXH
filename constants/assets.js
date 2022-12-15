@@ -3,9 +3,17 @@ import eth from "../assets/icons/eth.png";
 import heart from "../assets/icons/heart.png";
 import left from "../assets/icons/left.png";
 import search from "../assets/icons/search.png";
-
+import edit from "../assets/images/edit.png";
+import more from "../assets/images/more.png";
+import room from "../assets/images/room.png";
+import bill from "../assets/images/bill.png";
+import services from "../assets/images/services.png";
 import user from "../assets/images/user.png";
 import logo from "../assets/images/logo.png";
+import addfriend from "../assets/images/addfriend.png";
+import call from "../assets/images/call.png";
+import chat from "../assets/images/chat.png";
+
 import nft01 from "../assets/images/nft01.png";
 import nft02 from "../assets/images/nft02.jpeg";
 import nft03 from "../assets/images/nft03.jpeg";
@@ -25,9 +33,17 @@ export default {
   heart,
   left,
   search,
-
+  edit,
+  more,
+  room,
+  bill,
+  services,
   user,
   logo,
+  addfriend,
+  call,
+  chat,
+
   nft01,
   nft02,
   nft03,

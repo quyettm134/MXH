@@ -2,7 +2,7 @@ import { View, Text, SafeAreaView, StyleSheet, Image, TouchableOpacity } from 'r
 import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { CircleButton } from '../components';
-import { assets, COLORS } from '../constants';
+import { assets, COLORS, accounts } from '../constants';
 
 const BillDetails = () => {
     const navigation = useNavigation();
@@ -10,12 +10,16 @@ const BillDetails = () => {
     const [roomInfo, setRoomInfo] = useState(true);
     const [memberInfo, setMemberInfo] = useState(false);
 
+    const user1 = accounts[0];
+    const user2 = accounts[2];
+    const user3 = accounts[3];
+
     return (
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                 <View style={styles.header}>
                     <View style={styles.nameContainer}>
-                    <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Room Info</Text>
+                    <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Thông tin phòng</Text>
                     <CircleButton
                         imgUrl={assets.left}
                         handlePress={() => navigation.goBack()}
@@ -189,7 +193,7 @@ const BillDetails = () => {
                         alignItems: 'center',
                       }}>
                         <Image source={assets.user} style={styles.icon}/>
-                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Nguyễn Sỹ Quyết</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold", color: COLORS.primary }}>Nguyễn Sỹ Quyết</Text>
                         <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
                       </TouchableOpacity>
 
@@ -202,8 +206,8 @@ const BillDetails = () => {
                         alignItems: 'center',
                       }}>
                         <Image source={assets.user} style={styles.icon}/>
-                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Phạm Văn Đạt</Text>
-                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>{user1.name}</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>{user1.phoneNumber}</Text>
                       </TouchableOpacity>
                     </View>
 
@@ -217,8 +221,8 @@ const BillDetails = () => {
                         alignItems: 'center',
                       }}>
                         <Image source={assets.user} style={styles.icon}/>
-                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Trương Anh Khoa</Text>
-                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>{user2.name}</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>{user2.phoneNumber}</Text>
                       </TouchableOpacity>
 
                       <TouchableOpacity onPress={() => navigation.navigate("UserInfo")} style={{
@@ -230,8 +234,8 @@ const BillDetails = () => {
                         alignItems: 'center',
                       }}>
                         <Image source={assets.user} style={styles.icon}/>
-                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Vũ Thành Công</Text>
-                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>{user3.name}</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>{user3.phoneNumber}</Text>
                       </TouchableOpacity>
                     </View>
                 </View>}
