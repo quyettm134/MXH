@@ -32,7 +32,7 @@ const BillDetails = () => {
             <View style={styles.container}>
                 <View style={styles.header}>
                     <View style={styles.nameContainer}>
-                        <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Bill Details</Text>
+                        <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Chi tiết hóa đơn</Text>
                         <CircleButton
                             imgUrl={assets.left}
                             handlePress={() => navigation.goBack()}
