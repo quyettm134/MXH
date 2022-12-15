@@ -21,7 +21,7 @@ const Bills = () => {
 			<View style={styles.container}>
 				<View style={styles.header}>
 					<View style={styles.nameContainer}>
-						<Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Bills Management</Text>
+						<Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Hóa đơn của tôi</Text>
 						<CircleButton
 							imgUrl={assets.left}
 							handlePress={() => navigation.goBack()}
@@ -31,7 +31,7 @@ const Bills = () => {
 					</View>
 				</View>
 				<View style={styles.body}>
-					<View style={{ marginLeft: 10 }}>
+					<View style={{ marginLeft: 20 }}>
 						<Text style={{ fontWeight: "bold", fontSize: 16 }}>Phân loại theo tháng</Text>
 						<View style={{ paddingTop: 20 }}>
 							<DropDownPicker style={{
