@@ -8,20 +8,18 @@ const AddService = () => {
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <View style={styles.header}>
-                <View style={styles.nameContainer}>
-                    <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Thêm dịch vụ</Text>
-                    <CircleButton
-                        imgUrl={assets.left}
-                        handlePress={() => navigation.goBack()}
-                        left={15}
-                        top={5}
-                    />
-                </View>
-            </View>
-
             <View style={styles.container}>
-                <View style={styles.header}></View>
+                <View style={styles.header}>
+                    <View style={styles.nameContainer}>
+                        <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Thêm dịch vụ</Text>
+                        <CircleButton
+                            imgUrl={assets.left}
+                            handlePress={() => navigation.goBack()}
+                            left={15}
+                            top={5}
+                        />
+                    </View>
+                </View>
                 <View style={styles.body}>
                     <View style={styles.bodyContent}>
                         <View style={styles.nameContainer}>
@@ -63,9 +61,9 @@ const AddService = () => {
 
 const styles = StyleSheet.create({
     header: {
-        height: 50,
-        backgroundColor: COLORS.primary,
-        marginTop: 20
+        height: 80,
+		backgroundColor: COLORS.primary,
+		paddingTop: 10
     },
     backgroundImage: {
         flex: 1,
@@ -88,7 +86,7 @@ const styles = StyleSheet.create({
         fontWeight: '600',
     },
     body: {
-        marginTop: 40,
+        marginTop: 80,
     },
     bodyContent: {
         flex: 1,

@@ -51,36 +51,6 @@ const AccountInfo = () => {
           </View>
         </View>
       </View>
-
-      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("RoomInfo")}>
-        <Image source={assets.room} style={{
-          width: 25,
-          height: 25,
-          marginRight: 30
-        }} />
-        <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Phòng của tôi</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("Bills")}>
-        <Image source={assets.bill} style={{
-          width: 25,
-          height: 25,
-          marginRight: 30
-        }} />
-        <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Hóa đơn của tôi</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("AddService")}>
-        <Image source={assets.services} style={{
-          width: 25,
-          height: 25,
-          marginRight: 30
-        }} />
-        <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Yêu cầu của tôi</Text>
-      </TouchableOpacity>
-    </View>
-        </View >
-      </View >
     </SafeAreaView >
   )
 }

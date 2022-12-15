@@ -1,9 +1,9 @@
-import { View, Text, SafeAreaView, StyleSheet, TextInput, Alert, TouchableOpacity } from 'react-native';
+import { View, Text, SafeAreaView, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
 import { CircleButton } from '../components';
-import { COLORS, assets, bills, SIZES } from '../constants';
+import { COLORS, assets, SIZES } from '../constants';
 
 const SignUpService = () => {
     const navigation = useNavigation();
@@ -73,7 +73,7 @@ const SignUpService = () => {
                             onChangeText={(date) => setDate(date)} />
                     </View>
                     <View style={{ justifyContent: "center", alignItems: "center", paddingTop: 150 }}>
-                        <TouchableOpacity style={styles.loginBtn} >
+                        <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate("Services")}>
                             <Text style={{
                                 color: COLORS.white,
                                 textAlign: "center"

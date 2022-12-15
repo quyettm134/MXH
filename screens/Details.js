@@ -1,33 +1,9 @@
-import { Text, View, SafeAreaView, Image, StatusBar, FlatList, Alert } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import { Text, View, SafeAreaView, Image, StatusBar, FlatList, Alert, TouchableOpacity } from 'react-native';
 import React, { useState } from 'react';
 import { COLORS, SIZES, assets } from '../constants';
 import { CircleButton, SubInfo, FocusedStatusBar, DetailsDesc, DetailsBid } from '../components';
 
 const DetailsHeader = ({ data, navigation }) => {
-  const navigation = useNavigation();
-
-  const [showBox, setShowBox] = useState(true);
-
-    const showConfirmDialog = () => {
-        return Alert.alert(
-            "Xác nhận",
-            "Bạn chắc chắn hủy yêu cầu?",
-            [
-                {
-                    text: 'Yes',
-                    onPress: () => {
-                        setShowBox(false);
-                        navigation.navigate("Services");
-                    }
-                },
-                {
-                    text: 'No',
-                }
-            ]
-        );
-    };
-
   return (
     <View style={{ width: '100%', height: 373 }}>
       <Image
@@ -55,6 +31,27 @@ const DetailsHeader = ({ data, navigation }) => {
 const Details = ({ route, navigation }) => {
   const { data } = route.params;
 
+  const [showBox, setShowBox] = useState(true);
+
+  const showConfirmDialog = () => {
+      return Alert.alert(
+          "Xác nhận",
+          "Bạn chắc chắn đăng ký phòng?",
+          [
+              {
+                  text: 'Yes',
+                  onPress: () => {
+                      setShowBox(false);
+                      navigation.navigate("RoomInfo");
+                  }
+              },
+              {
+                  text: 'No',
+              }
+          ]
+      );
+  };
+
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <FocusedStatusBar
@@ -80,12 +77,7 @@ const Details = ({ route, navigation }) => {
                 minWidth: 170,
                 padding: SIZES.small,
             }}
-            onPress={
-              () => {
-                showConfirmDialog();
-                navigation.navigate("RoomInfo");
-              }
-            }
+            onPress={() => showConfirmDialog()}
         >
             <Text style={{
                 fontSize: SIZES.large,
