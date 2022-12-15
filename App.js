@@ -5,6 +5,7 @@ import Login from './screens/Login';
 import Home from './screens/Home';
 import Details from './screens/Details';
 import AccountInfo from './screens/AccountInfo';
+import UserInfo from './screens/UserInfo';
 import Bills from './screens/Bills';
 import BillDetails from './screens/BillDetails';
 import RoomInfo from './screens/RoomInfo';
@@ -37,6 +38,7 @@ const App = () => {
         <Stack.Screen name="Home" component={Home}/>
         <Stack.Screen name="Details" component={Details}/>
         <Stack.Screen name="AccountInfo" component={AccountInfo}/>
+        <Stack.Screen name="UserInfo" component={UserInfo}/>
         <Stack.Screen name="Bills" component={Bills}/>
         <Stack.Screen name="BillDetails" component={BillDetails}/>
         <Stack.Screen name="RoomInfo" component={RoomInfo}/>

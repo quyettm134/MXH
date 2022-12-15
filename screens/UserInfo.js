@@ -1,10 +1,8 @@
 import { View, Text, SafeAreaView, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { COLORS, assets } from '../constants';
 import { FocusedStatusBar } from '../components';
-import { useNavigation } from '@react-navigation/native';
 
-const AccountInfo = () => {
-    const navigation = useNavigation();
+const UserInfo = () => {
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -12,23 +10,23 @@ const AccountInfo = () => {
 
             <View style={styles.container}>
                 <View style={styles.header}></View>
-                <Image style={styles.avatar} source={assets.person01}/>
+                <Image style={styles.avatar} source={assets.person02}/>
                 <View style={styles.body}>
                     <View style={styles.bodyContent}>
                       <View style={styles.nameContainer}>
-                        <Text style={{ color: "#000000", fontWeight: "bold", fontSize: 32 }}>Nguyễn Sỹ Quyết</Text> 
+                        <Text style={{ color: "#000000", fontWeight: "bold", fontSize: 32 }}>User</Text> 
                       </View>  
                                   
-                      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("RoomInfo")}>
-                        <Text style={{ color: "#FFFFFF" }}>Current room</Text> 
-                      </TouchableOpacity>
-
-                      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("Bills")}>
-                        <Text style={{ color: "#FFFFFF" }}>Bills</Text> 
+                      <TouchableOpacity style={styles.buttonContainer}>
+                        <Text style={{ color: "#FFFFFF" }}>Add friend</Text> 
                       </TouchableOpacity>
 
                       <TouchableOpacity style={styles.buttonContainer}>
-                        <Text style={{ color: "#FFFFFF" }}>Services</Text> 
+                        <Text style={{ color: "#FFFFFF" }}>Call</Text> 
+                      </TouchableOpacity>
+
+                      <TouchableOpacity style={styles.buttonContainer}>
+                        <Text style={{ color: "#FFFFFF" }}>Message</Text> 
                       </TouchableOpacity>
                     </View>
                 </View>
@@ -91,4 +89,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default AccountInfo;
+export default UserInfo;

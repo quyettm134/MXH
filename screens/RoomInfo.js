@@ -1,11 +1,14 @@
-import { View, Text, SafeAreaView, StyleSheet, Image } from 'react-native';
-import React from 'react';
+import { View, Text, SafeAreaView, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { CircleButton } from '../components';
 import { assets, COLORS } from '../constants';
 
 const BillDetails = () => {
     const navigation = useNavigation();
+
+    const [roomInfo, setRoomInfo] = useState(true);
+    const [memberInfo, setMemberInfo] = useState(false);
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
@@ -24,14 +27,32 @@ const BillDetails = () => {
 
                 <View style={{
                     paddingTop: 10,
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    marginBottom: -10
+                    paddingBottom: -10
                 }}>
-                    <Text style={{ fontWeight: "bold", fontSize: 24 }}>Thông tin phòng ở</Text>
+                  <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
+                    <TouchableOpacity onPress={() => {
+                      if (roomInfo === true && memberInfo === false) {}
+                      else {
+                        setRoomInfo(true);
+                        setMemberInfo(false);
+                      }
+                    }}>
+                      <Text style={roomInfo ? { fontWeight: "bold", paddingLeft: 50, fontSize: 24, color: COLORS.primary } : { fontWeight: "bold", paddingLeft: 50, fontSize: 24 }}>Thông tin</Text>
+                    </TouchableOpacity>
+                    <View style={{ height: 30, width: 1, borderWidth: 1, borderColor: COLORS.primary }}></View>
+                    <TouchableOpacity onPress={() => {
+                      if (memberInfo === true && roomInfo === false) {}
+                      else {
+                        setRoomInfo(false);
+                        setMemberInfo(true);
+                      }
+                    }}>
+                      <Text style={memberInfo ? { fontWeight: "bold", paddingRight: 50, fontSize: 24, color: COLORS.primary } : { fontWeight: "bold", paddingRight: 50, fontSize: 24 }}>Thành viên</Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
 
-                <View style={styles.body}>
+                {roomInfo && <View style={styles.body}>
                     <View style={styles.bodyContent}>
                         <View style={styles.bill}>                            
                             <View style={{ justifyContent: 'space-between', flexDirection: 'row' }}>
@@ -72,7 +93,13 @@ const BillDetails = () => {
                             </View>
                             <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginTop: 20 }}>
                                 <View style={{ paddingLeft: 10, paddingTop: 10 }}>
-                                    <Text style={styles.billText}>Số người ở tối đa</Text>
+                                    <Text style={{
+                                      fontWeight: "bold",
+                                      fontSize: 16,
+                                      marginTop: 5,
+                                      marginBottom: 10,
+                                      paddingRight: 30
+                                    }}>Số người ở tối đa</Text>
                                     <Text style={{
                                       fontWeight: "bold",
                                       fontSize: 16,
@@ -80,7 +107,7 @@ const BillDetails = () => {
                                       marginBottom: 10,
                                       color: "red",
                                       paddingLeft: 30
-                                    }}>3 người</Text>
+                                    }}>4 người</Text>
                                 </View>
                                 <View style={{ paddingRight: 10, paddingTop: 10, alignItems: 'center' }}>
                                     <Text style={{
@@ -97,7 +124,7 @@ const BillDetails = () => {
                                       marginBottom: 10,
                                       color: "red",
                                       paddingLeft: 30
-                                    }}>2 người</Text>
+                                    }}>4 người</Text>
                                 </View>
                             </View>
                             <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginTop: 20 }}>
@@ -138,10 +165,9 @@ const BillDetails = () => {
                             </View>
                         </View>
                     </View>
-                </View>
+                </View>}
 
-
-                <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 300 }}>
+                {roomInfo && <View style={{ justifyContent: 'center', alignItems: 'center', marginTop: 300 }}>
                     <Text style={{ fontWeight: "bold", fontSize: 24, paddingBottom: 20 }}>Ảnh chụp</Text>
                     <Image
                       source={assets.nft01}
@@ -150,7 +176,65 @@ const BillDetails = () => {
                         height: 200,
                       }}
                     />
-                </View>
+                </View>}
+
+                {memberInfo && <View style={styles.body}>
+                    <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginTop: 40 }}>
+                      <TouchableOpacity onPress={() => navigation.navigate("AccountInfo")} style={{
+                        height: 150,
+                        width: 150,
+                        borderWidth: 1,
+                        borderRadius: 15,
+                        marginLeft: 30,
+                        alignItems: 'center',
+                      }}>
+                        <Image source={assets.user} style={styles.icon}/>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Nguyễn Sỹ Quyết</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
+                      </TouchableOpacity>
+
+                      <TouchableOpacity onPress={() => navigation.navigate("UserInfo")} style={{
+                        height: 150,
+                        width: 150,
+                        borderWidth: 1,
+                        borderRadius: 15,
+                        marginRight: 30,
+                        alignItems: 'center',
+                      }}>
+                        <Image source={assets.user} style={styles.icon}/>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Phạm Văn Đạt</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
+                      </TouchableOpacity>
+                    </View>
+
+                    <View style={{ justifyContent: 'space-between', flexDirection: 'row', marginTop: 40 }}>
+                      <TouchableOpacity onPress={() => navigation.navigate("UserInfo")} style={{
+                        height: 150,
+                        width: 150,
+                        borderWidth: 1,
+                        borderRadius: 15,
+                        marginLeft: 30,
+                        alignItems: 'center',
+                      }}>
+                        <Image source={assets.user} style={styles.icon}/>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Trương Anh Khoa</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
+                      </TouchableOpacity>
+
+                      <TouchableOpacity onPress={() => navigation.navigate("UserInfo")} style={{
+                        height: 150,
+                        width: 150,
+                        borderWidth: 1,
+                        borderRadius: 15,
+                        marginRight: 30,
+                        alignItems: 'center',
+                      }}>
+                        <Image source={assets.user} style={styles.icon}/>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>Vũ Thành Công</Text>
+                        <Text style={{ marginTop: 10, fontWeight: "bold" }}>0123456789</Text>
+                      </TouchableOpacity>
+                    </View>
+                </View>}
             </View>
         </SafeAreaView>
     )
@@ -190,6 +274,18 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         marginTop: 0,
     },
+    member: {
+      height: 50,
+      width: 50,
+      borderWidth: 1,
+      borderRadius: 15,
+      marginTop: 0,
+    },
+    icon: {
+      width: 70,
+      height: 70,
+      marginTop: 10
+    }
 });
   
 export default BillDetails;
