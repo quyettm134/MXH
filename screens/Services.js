@@ -13,7 +13,7 @@ const Services = () => {
         <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.header}>
                 <View style={styles.nameContainer}>
-                    <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}></Text>
+                    <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Dịch vụ</Text>
                     <CircleButton
                         imgUrl={assets.left}
                         handlePress={() => navigation.goBack()}

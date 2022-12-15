@@ -7,9 +7,7 @@ import {
     View,
     Image,
     TextInput,
-    Button,
     TouchableOpacity,
-    LogBox,
     Alert,
 } from "react-native";
 import { assets } from "../constants";
@@ -96,7 +94,6 @@ const styles = StyleSheet.create({
     },
 
     inputView: {
-        // backgroundColor: "#FFC0CB",
         borderWidth: 1,
         borderColor: "#000000",
         borderRadius: 30,

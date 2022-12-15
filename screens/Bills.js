@@ -35,7 +35,7 @@ const Bills = () => {
 						<Text style={{ fontWeight: "bold", fontSize: 16 }}>Phân loại theo tháng</Text>
 						<View style={{ paddingTop: 20 }}>
 							<DropDownPicker style={{
-								width: 373,
+								width: 355,
 							}}
 								placeholder="Chọn tháng"
 								open={open}
