@@ -1,24 +1,35 @@
 import { View, Text, SafeAreaView, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import { COLORS, assets } from '../constants';
-import { FocusedStatusBar } from '../components';
+import { useNavigation } from '@react-navigation/native';
+import { CircleButton } from '../components';
 
 const AddService = () => {
+    const navigation = useNavigation();
 
     return (
         <SafeAreaView style={{ flex: 1 }}>
-            <FocusedStatusBar background={COLORS.primary} />
+            <View style={styles.header}>
+                <View style={styles.nameContainer}>
+                    <Text style={{ color: "#FFFFFF", fontWeight: "bold", fontSize: 24 }}>Thêm dịch vụ</Text>
+                    <CircleButton
+                        imgUrl={assets.left}
+                        handlePress={() => navigation.goBack()}
+                        left={15}
+                        top={5}
+                    />
+                </View>
+            </View>
 
             <View style={styles.container}>
                 <View style={styles.header}></View>
-                {/* <Image style={styles.avatar} source={assets.person02} /> */}
                 <View style={styles.body}>
                     <View style={styles.bodyContent}>
                         <View style={styles.nameContainer}>
-                            <Text style={{ color: "#000000", fontWeight: "bold", fontSize: 32 }}>User</Text>
+                            <Text style={{ color: "#000000", fontWeight: "bold", fontSize: 32 }}></Text>
                         </View>
 
-                        <TouchableOpacity style={styles.buttonContainer}>
-                            <Image source={assets.addfriend} style={{
+                        <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("SignUpService")}>
+                            <Image source={assets.wifi} style={{
                                 width: 25,
                                 height: 25,
                                 marginRight: 30
@@ -26,8 +37,8 @@ const AddService = () => {
                             <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Đăng ký Wifi</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.buttonContainer}>
-                            <Image source={assets.call} style={{
+                        <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("SignUpService")}>
+                            <Image source={assets.bike} style={{
                                 width: 25,
                                 height: 25,
                                 marginRight: 30
@@ -35,8 +46,8 @@ const AddService = () => {
                             <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Đăng ký gửi xe</Text>
                         </TouchableOpacity>
 
-                        <TouchableOpacity style={styles.buttonContainer}>
-                            <Image source={assets.chat} style={{
+                        <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("SignUpService")}>
+                            <Image source={assets.clean} style={{
                                 width: 25,
                                 height: 25,
                                 marginRight: 30
@@ -52,8 +63,9 @@ const AddService = () => {
 
 const styles = StyleSheet.create({
     header: {
-        height: 200,
-        backgroundColor: COLORS.primary
+        height: 50,
+        backgroundColor: COLORS.primary,
+        marginTop: 20
     },
     backgroundImage: {
         flex: 1,

@@ -12,6 +12,7 @@ import RoomInfo from './screens/RoomInfo';
 import Services from './screens/Services';
 import ServiceInfo from './screens/ServiceInfo';
 import AddService from './screens/AddService';
+import SignUpService from './screens/SignUpService';
 
 const Stack = createStackNavigator();
 
@@ -48,6 +49,7 @@ const App = () => {
         <Stack.Screen name="Services" component={Services} />
         <Stack.Screen name="ServiceInfo" component={ServiceInfo} />
         <Stack.Screen name="AddService" component={AddService} />
+        <Stack.Screen name="SignUpService" component={SignUpService} />
       </Stack.Navigator>
     </NavigationContainer>
   );

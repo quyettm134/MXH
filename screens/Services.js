@@ -41,7 +41,7 @@ const Services = () => {
 							</View>
 							<View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10 }}></View>
 							<View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                                <Text style={styles.billText}>Trạng thái: <Text style={{ color: "red" }}>Đang duyệt</Text></Text>
+								<Text style={styles.billText}>Trạng thái: <Text style={{ color: "red" }}>Đang duyệt</Text></Text>
 								<Text style={styles.billText}>Ngày tạo yêu cầu: <Text>{bills[0].date}</Text></Text>
 							</View>
 						</TouchableOpacity>
@@ -52,40 +52,40 @@ const Services = () => {
 							</View>
 							<View style={{ height: 1, width: 370, borderWidth: 1, marginTop: 10 }}></View>
 							<View style={{ height: '100%', width: '100%', paddingLeft: 10 }}>
-                                <Text style={styles.billText}>Trạng thái: <Text style={{ color: "green" }}>Đã duyệt</Text></Text>
+								<Text style={styles.billText}>Trạng thái: <Text style={{ color: "green" }}>Đã duyệt</Text></Text>
 								<Text style={styles.billText}>Ngày tạo yêu cầu: <Text>{bills[0].date}</Text></Text>
 							</View>
-						</TouchableOpacity>          
+						</TouchableOpacity>
 					</View>
 				</View>
 			</View>
 
-            <View style={{
-                width: '100%',
-                position: 'absolute',
-                bottom: 20,
-                paddingVertical: SIZES.font,
-                justifyContent: 'center',
-                alignItems: 'center',
-                backgroundColor: 'rgba(255, 255, 255, 0.5)',
-                zIndex: 1
-            }}>
-                <TouchableOpacity 
-                    style={{
-                        backgroundColor: COLORS.primary,
-                        borderRadius: SIZES.extraLarge,
-                        minWidth: 170,
-                        padding: SIZES.small,
-                    }}
-                    onPress={() => navigation.navigate("AddService")}
-                >
-                    <Text style={{
-                        fontSize: SIZES.large,
-                        color: COLORS.white,
-                        textAlign: "center"
-                    }}>Tạo yêu cầu mới</Text>
-                </TouchableOpacity>
-            </View>
+			<View style={{
+				width: '100%',
+				position: 'absolute',
+				bottom: 20,
+				paddingVertical: SIZES.font,
+				justifyContent: 'center',
+				alignItems: 'center',
+				backgroundColor: 'rgba(255, 255, 255, 0.5)',
+				zIndex: 1
+			}}>
+				<TouchableOpacity
+					style={{
+						backgroundColor: COLORS.primary,
+						borderRadius: SIZES.extraLarge,
+						minWidth: 170,
+						padding: SIZES.small,
+					}}
+					onPress={() => navigation.navigate("AddService")}
+				>
+					<Text style={{
+						fontSize: SIZES.large,
+						color: COLORS.white,
+						textAlign: "center"
+					}}>Tạo yêu cầu mới</Text>
+				</TouchableOpacity>
+			</View>
 		</SafeAreaView>
 	)
 }
