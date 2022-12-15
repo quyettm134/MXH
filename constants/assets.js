@@ -13,6 +13,9 @@ import logo from "../assets/images/logo.png";
 import addfriend from "../assets/images/addfriend.png";
 import call from "../assets/images/call.png";
 import chat from "../assets/images/chat.png";
+import wifi from '../assets/icons/wifi.png';
+import bike from '../assets/icons/bike.png';
+import clean from '../assets/icons/clean.png';
 
 import nft01 from "../assets/images/nft01.png";
 import nft02 from "../assets/images/nft02.jpeg";
@@ -43,6 +46,9 @@ export default {
   addfriend,
   call,
   chat,
+  wifi,
+  bike,
+  clean,
 
   nft01,
   nft02,

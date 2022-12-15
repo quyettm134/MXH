@@ -77,6 +77,7 @@ const Services = () => {
                         minWidth: 170,
                         padding: SIZES.small,
                     }}
+                    onPress={() => navigation.navigate("AddService")}
                 >
                     <Text style={{
                         fontSize: SIZES.large,
