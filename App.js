@@ -9,6 +9,8 @@ import UserInfo from './screens/UserInfo';
 import Bills from './screens/Bills';
 import BillDetails from './screens/BillDetails';
 import RoomInfo from './screens/RoomInfo';
+import Services from './screens/Services';
+
 
 const Stack = createStackNavigator();
 
@@ -34,14 +36,15 @@ const App = () => {
   else return (
     <NavigationContainer theme={theme}>
       <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Login">
-        <Stack.Screen name="Login" component={Login}/>
-        <Stack.Screen name="Home" component={Home}/>
-        <Stack.Screen name="Details" component={Details}/>
-        <Stack.Screen name="AccountInfo" component={AccountInfo}/>
-        <Stack.Screen name="UserInfo" component={UserInfo}/>
-        <Stack.Screen name="Bills" component={Bills}/>
-        <Stack.Screen name="BillDetails" component={BillDetails}/>
-        <Stack.Screen name="RoomInfo" component={RoomInfo}/>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="AccountInfo" component={AccountInfo} />
+        <Stack.Screen name="UserInfo" component={UserInfo} />
+        <Stack.Screen name="Bills" component={Bills} />
+        <Stack.Screen name="BillDetails" component={BillDetails} />
+        <Stack.Screen name="RoomInfo" component={RoomInfo} />
+        <Stack.Screen name="Services" component={Services} />
       </Stack.Navigator>
     </NavigationContainer>
   );
