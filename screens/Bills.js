@@ -31,11 +31,11 @@ const Bills = () => {
 					</View>
 				</View>
 				<View style={styles.body}>
-					<View style={{ marginLeft: 10 }}>
+					<View style={{ marginLeft: 20 }}>
 						<Text style={{ fontWeight: "bold", fontSize: 16 }}>Phân loại theo tháng</Text>
 						<View style={{ paddingTop: 20 }}>
 							<DropDownPicker style={{
-								width: 373,
+								width: 355,
 							}}
 								placeholder="Chọn tháng"
 								open={open}
