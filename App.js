@@ -10,6 +10,7 @@ import Bills from './screens/Bills';
 import BillDetails from './screens/BillDetails';
 import RoomInfo from './screens/RoomInfo';
 import Services from './screens/Services';
+import ServiceInfo from './screens/ServiceInfo';
 
 
 const Stack = createStackNavigator();
@@ -45,6 +46,7 @@ const App = () => {
         <Stack.Screen name="BillDetails" component={BillDetails} />
         <Stack.Screen name="RoomInfo" component={RoomInfo} />
         <Stack.Screen name="Services" component={Services} />
+        <Stack.Screen name="ServiceInfo" component={ServiceInfo} />
       </Stack.Navigator>
     </NavigationContainer>
   );

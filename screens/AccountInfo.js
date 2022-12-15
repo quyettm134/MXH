@@ -40,7 +40,7 @@ const AccountInfo = () => {
                         <Text style={{ color: "#FFFFFF", paddingRight: 30 }}>Hóa đơn của tôi</Text> 
                       </TouchableOpacity>
 
-                      <TouchableOpacity style={styles.buttonContainer}>
+                      <TouchableOpacity style={styles.buttonContainer} onPress={() => navigation.navigate("Services")}>
                         <Image source={assets.services} style={{
                           width: 25,
                           height: 25,
