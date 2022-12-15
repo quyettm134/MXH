@@ -3,11 +3,11 @@ import assets from "./assets";
 const NFTData = [
   {
     id: "NFT-01",
-    name: "Abstracto #312",
-    creator: "Putri Intan",
+    name: "Nhà trọ Phương Nam",
+    creator: "4 Đường 205A, KP3, Quận 9, Thành phố Hồ Chí Minh",
     price: "400 lượt thích",
     description:
-      "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
+      "Bãi đậu xe hơi và Wi-Fi luôn miễn phí, vì vậy bạn có thể giữ liên lạc và đến và đi tùy thích. Tọa lạc tại một vị trí thuận tiện trong khu vực Phú Nhuận của Thành phố Hồ Chí Minh, khách sạn này đưa bạn đến gần các điểm tham quan và lựa chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng Chứng tích Chiến tranh nổi tiếng. Được đánh giá 5 sao, chỗ nghỉ chất lượng cao này cung cấp cho khách quyền sử dụng dịch vụ mát-xa, nhà hàng và trung tâm thể dục ngay trong khuôn viên.",
     image: assets.nft01,
     bids: [
       {
@@ -35,11 +35,11 @@ const NFTData = [
   },
   {
     id: "NFT-02",
-    name: "Green Coins",
-    creator: "Siti Nurhaliza",
+    name: "Nhà trọ Kim Hoàn",
+    creator: "đường 21, Khu Phố Nhị Đồng 1, Dĩ An, Bình Dương",
     price: "714 lượt thích",
     description:
-      "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis.",
+      "Bãi đậu xe hơi và Wi-Fi luôn miễn phí, vì vậy bạn có thể giữ liên lạc và đến và đi tùy thích. Tọa lạc tại một vị trí thuận tiện trong khu vực Phú Nhuận của Thành phố Hồ Chí Minh, khách sạn này đưa bạn đến gần các điểm tham quan và lựa chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng Chứng tích Chiến tranh nổi tiếng. Được đánh giá 5 sao, chỗ nghỉ chất lượng cao này cung cấp cho khách quyền sử dụng dịch vụ mát-xa, nhà hàng và trung tâm thể dục ngay trong khuôn viên.",
     image: assets.nft02,
     bids: [
       {
@@ -53,11 +53,11 @@ const NFTData = [
   },
   {
     id: "NFT-03",
-    name: "NFT coins race",
-    creator: "Elisabeth aho",
+    name: "Nhà trọ Trường Vũ",
+    creator: "16 Đường N2, khu phố thống nhất 1, Dĩ An, Bình Dương",
     price: "95 lượt thích",
     description:
-      "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis.",
+      "Bãi đậu xe hơi và Wi-Fi luôn miễn phí, vì vậy bạn có thể giữ liên lạc và đến và đi tùy thích. Tọa lạc tại một vị trí thuận tiện trong khu vực Phú Nhuận của Thành phố Hồ Chí Minh, khách sạn này đưa bạn đến gần các điểm tham quan và lựa chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng Chứng tích Chiến tranh nổi tiếng. Được đánh giá 5 sao, chỗ nghỉ chất lượng cao này cung cấp cho khách quyền sử dụng dịch vụ mát-xa, nhà hàng và trung tâm thể dục ngay trong khuôn viên.",
     image: assets.nft03,
     bids: [
       {
@@ -78,11 +78,11 @@ const NFTData = [
   },
   {
     id: "NFT-04",
-    name: "Nifty NFT",
-    creator: "Putri Intan",
+    name: "Nhà trọ Hoàng Anh",
+    creator: "5 Trương Định, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
     price: "54 lượt thích",
     description:
-      "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur.",
+      "Bãi đậu xe hơi và Wi-Fi luôn miễn phí, vì vậy bạn có thể giữ liên lạc và đến và đi tùy thích. Tọa lạc tại một vị trí thuận tiện trong khu vực Phú Nhuận của Thành phố Hồ Chí Minh, khách sạn này đưa bạn đến gần các điểm tham quan và lựa chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng Chứng tích Chiến tranh nổi tiếng. Được đánh giá 5 sao, chỗ nghỉ chất lượng cao này cung cấp cho khách quyền sử dụng dịch vụ mát-xa, nhà hàng và trung tâm thể dục ngay trong khuôn viên.",
     image: assets.nft04,
     bids: [
       {
@@ -117,11 +117,11 @@ const NFTData = [
   },
   {
     id: "NFT-05",
-    name: "Colorful circles",
-    creator: "David doe",
+    name: "Nhà trọ Hoàng Dung",
+    creator: "53 Hai Bà Trưng, Đông Hoà, Dĩ An, Bình Dương",
     price: "862 lượt thích",
     description:
-      "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural.",
+      "Bãi đậu xe hơi và Wi-Fi luôn miễn phí, vì vậy bạn có thể giữ liên lạc và đến và đi tùy thích. Tọa lạc tại một vị trí thuận tiện trong khu vực Phú Nhuận của Thành phố Hồ Chí Minh, khách sạn này đưa bạn đến gần các điểm tham quan và lựa chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng Chứng tích Chiến tranh nổi tiếng. Được đánh giá 5 sao, chỗ nghỉ chất lượng cao này cung cấp cho khách quyền sử dụng dịch vụ mát-xa, nhà hàng và trung tâm thể dục ngay trong khuôn viên.",
     image: assets.nft05,
     bids: [
       {
@@ -135,11 +135,11 @@ const NFTData = [
   },
   {
     id: "NFT-06",
-    name: "Black box model",
-    creator: "Leo Messi",
+    name: "Nhà trọ Ánh Dương",
+    creator: "42-44 Thủ Khoa Huân, Phường Bến Thành, Quận 1, Thành phố Hồ Chí Minh",
     price: "200 lượt thích",
     description:
-      "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis.",
+      "Bãi đậu xe hơi và Wi-Fi luôn miễn phí, vì vậy bạn có thể giữ liên lạc và đến và đi tùy thích. Tọa lạc tại một vị trí thuận tiện trong khu vực Phú Nhuận của Thành phố Hồ Chí Minh, khách sạn này đưa bạn đến gần các điểm tham quan và lựa chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng Chứng tích Chiến tranh nổi tiếng. Được đánh giá 5 sao, chỗ nghỉ chất lượng cao này cung cấp cho khách quyền sử dụng dịch vụ mát-xa, nhà hàng và trung tâm thể dục ngay trong khuôn viên.",
     image: assets.nft06,
     bids: [
       {
@@ -181,11 +181,11 @@ const NFTData = [
   },
   {
     id: "NFT-07",
-    name: "Abstracto soulful art",
-    creator: "Victor de la Cruz",
+    name: "Nhà trọ Lộc Thiên",
+    creator: "280 Đ. Nam Kỳ Khởi Nghĩa, Phường 8, Quận 3, Thành phố Hồ Chí Minh",
     price: "18 lượt thích",
     description:
-      "The action painter abstract expressionists were directly influenced by automatism. Pollock channelled this into producing gestural. Lorem ipsum dolor sit amet consectetur adipiscing elit consequat accumsan sapien, lectus convallis malesuada odio curae habitasse dignissim nascetur. Nulla sed velit erat vitae leo sem inceptos diam fames arcu hendrerit, quis ultrices in eleifend posuere ipsum conubia porttitor felis. Ullamcorper platea penatibus ornare egestas nulla ligula hendrerit nisl suscipit sociosqu maximus, tincidunt aptent habitant purus pharetra ultrices dapibus laoreet nisi lacinia. Porta malesuada netus vel sapien conubia porttitor aliquam ut pretium ante litora molestie senectus magna egestas sociosqu, eget aliquet fames pharetra felis posuere varius fringilla quisque in arcu montes eu ullamcorper.",
+      "Bãi đậu xe hơi và Wi-Fi luôn miễn phí, vì vậy bạn có thể giữ liên lạc và đến và đi tùy thích. Tọa lạc tại một vị trí thuận tiện trong khu vực Phú Nhuận của Thành phố Hồ Chí Minh, khách sạn này đưa bạn đến gần các điểm tham quan và lựa chọn ăn uống thú vị. Đừng rời đi trước khi ghé thăm Bảo tàng Chứng tích Chiến tranh nổi tiếng. Được đánh giá 5 sao, chỗ nghỉ chất lượng cao này cung cấp cho khách quyền sử dụng dịch vụ mát-xa, nhà hàng và trung tâm thể dục ngay trong khuôn viên.",
     image: assets.nft07,
     bids: [],
   },

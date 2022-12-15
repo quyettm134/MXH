@@ -23,7 +23,7 @@ const DetailsBid = ({ bid }) => {
           fontSize: SIZES.small,
           color: COLORS.primary
         }}>
-          Bid placed by {bid.name}
+          Phòng chất lượng tốt, dịch vụ phòng rất ok!
         </Text>
 
         <Text style={{
